@@ -36,12 +36,10 @@ const AboutHero: React.FC = () => {
         width: "100svw",
 
         [theme.breakpoints.down("sm")]: {
-          left: "50%",
-          right: "50%",
-          marginLeft: "-50vw",
-          marginRight: "-50vw",
-          width: "100vw",
-          transform: "none",
+          width: "100%",
+        },
+        [theme.breakpoints.down("xs")]: {
+          width: "100%",
         },
       })}
     ></Box>
