@@ -41,6 +41,7 @@ const CTASection: React.FC = () => {
               height: "100%",
               objectFit: "cover",
               display: "block",
+              objectPosition: { xs: "50% 15%", md: "50% 50%" },
             }}
           />
           {/* overlay opcional (desative se não quiser) */}
