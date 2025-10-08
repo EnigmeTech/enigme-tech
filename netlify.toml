@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA (evita 404 no refresh)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

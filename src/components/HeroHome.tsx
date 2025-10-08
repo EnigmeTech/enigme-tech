@@ -56,7 +56,7 @@ const HeroHome: React.FC = () => {
               justifyContent: "center",
               mt: { xs: 3, md: 4 },
             }}
-            onClick={() => navigate("/contato")}
+            onClick={() => navigate("/sobre")}
           >
             <Chip
               label="Saiba mais"
