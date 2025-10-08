@@ -16,25 +16,34 @@ const AboutHero: React.FC = () => {
   return (
     <Box
       component="section"
-      sx={{
+      sx={(theme) => ({
         position: "relative",
-        left: "50%",
-        transform: "translateX(-50%)",
-        width: "100svw",
         overflow: "hidden",
-        minHeight: { xs: 320, md: 520 },
+        minHeight: { xs: 280, md: 520 },
         display: "flex",
         alignItems: "center",
         textAlign: "center",
-        backgroundImage: `
-          url(${aboutHero})
-        `,
+
+        backgroundImage: `url(${aboutHero})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        py: { xs: 8, md: 10 },
+        py: { xs: 6, md: 10 },
         mb: 4,
-      }}
+
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "100svw",
+
+        [theme.breakpoints.down("sm")]: {
+          left: "50%",
+          right: "50%",
+          marginLeft: "-50vw",
+          marginRight: "-50vw",
+          width: "100vw",
+          transform: "none",
+        },
+      })}
     ></Box>
   );
 };
