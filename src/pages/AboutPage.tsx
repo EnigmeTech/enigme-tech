@@ -102,7 +102,12 @@ const AboutSection: React.FC = () => {
                 desafio por ângulos diferentes até chegar à solução mais clara.
               </Typography>
 
-              <Stack direction="row" spacing={1} flexWrap="wrap">
+              <Stack
+                direction="row"
+                spacing={1}
+                flexWrap="wrap"
+                sx={{ columnGap: 1, rowGap: { xs: 1, sm: 1 } }}
+              >
                 <Chip label="Inovação" sx={{ fontWeight: 700 }} />
                 <Chip label="Clareza" sx={{ fontWeight: 700 }} />
                 <Chip label="Simplicidade" sx={{ fontWeight: 700 }} />
