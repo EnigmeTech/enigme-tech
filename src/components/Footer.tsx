@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import footImg from "../assets/enigme-white-logo.png";
+import footImg from "../../public/enigme-white-logo.png";
 
 const Footer: React.FC = () => {
   return (

@@ -9,8 +9,8 @@ import {
   Button,
 } from "@mui/material";
 
-import aboutHero from "../assets/about-hero.png";
-import sociosPhoto from "../assets/socios.jpg";
+import aboutHero from "../../public/about-hero.png";
+import sociosPhoto from "../../public/socios.jpg";
 
 const AboutHero: React.FC = () => {
   return (

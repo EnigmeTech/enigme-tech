@@ -1,7 +1,7 @@
 // src/components/Hero.tsx
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import heroBg from "../assets/hero-contact.png";
+import heroBg from "../../public/hero-contact.png";
 
 const Hero: React.FC = () => {
   return (
