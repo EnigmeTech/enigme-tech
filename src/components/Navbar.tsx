@@ -52,9 +52,17 @@ const Navbar: React.FC = () => {
             </Button>
             <Button
               component={RouterLink}
-              to="/contact"
+              to="/sobre"
               color="inherit"
-              variant={isActive("/contact") ? "outlined" : "text"}
+              variant={isActive("/sobre") ? "outlined" : "text"}
+            >
+              Sobre
+            </Button>
+            <Button
+              component={RouterLink}
+              to="/contato"
+              color="inherit"
+              variant={isActive("/contato") ? "outlined" : "text"}
             >
               Contato
             </Button>

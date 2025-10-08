@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Stack, Typography, Chip } from "@mui/material";
 import heroBg from "../assets/hero-home.png";
+import { useNavigate } from "react-router-dom";
 
 const HeroHome: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <Box
       component="section"
@@ -54,6 +56,7 @@ const HeroHome: React.FC = () => {
               justifyContent: "center",
               mt: { xs: 3, md: 4 },
             }}
+            onClick={() => navigate("/contato")}
           >
             <Chip
               label="Saiba mais"
