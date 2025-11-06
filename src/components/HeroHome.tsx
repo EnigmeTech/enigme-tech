@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Stack, Typography, Chip } from "@mui/material";
-import heroBg from "../../public/hero-home.png";
+import heroBg from "/hero-home.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroHome: React.FC = () => {

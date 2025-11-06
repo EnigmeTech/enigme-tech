@@ -1,7 +1,8 @@
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import HeroHome from "../components/HeroHome";
 import TechnologiesSection from "../components/TecnologiesSection";
 import ServicesSection from "../components/ServicesSection";
+import { FloatingActions } from "../components/FloatingActions";
 
 const HomePage: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage: React.FC = () => {
       <HeroHome />
       <TechnologiesSection />
       <ServicesSection />
+      <FloatingActions />
     </Stack>
   );
 };

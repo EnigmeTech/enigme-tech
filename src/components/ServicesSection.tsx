@@ -57,20 +57,17 @@ const ServicesSection: React.FC = () => {
         width: "100svw",
         py: { xs: 6, md: 8 },
         overflow: "hidden",
-        background: "#6EA3F3",
-        backgroundImage:
-          "linear-gradient(135deg, rgba(110,163,243,1) 0%, rgba(76,141,235,1) 60%, rgba(33,122,232,1) 100%)",
       }}
     >
       <Container maxWidth="lg" disableGutters>
         <Stack spacing={2} sx={{ textAlign: "center", mb: 4 }}>
-          <Typography variant="h4" sx={{ fontWeight: 800, color: "#0B1020" }}>
+          <Typography variant="h4" sx={{ fontWeight: 800, color: "#FFFFFF" }}>
             Serviços
           </Typography>
           <Typography
             variant="body1"
             color="text.secondary"
-            sx={{ color: "#0B1020", fontWeight: 800 }}
+            sx={{ fontWeight: 800 }}
           >
             Do entendimento do problema à entrega em produção — cuidamos de cada
             etapa para que suas ideias virem resultados.

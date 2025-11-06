@@ -1,7 +1,7 @@
 import React from "react";
 import { Paper, Stack, Typography, Button, Box } from "@mui/material";
 import ContactForm from "./ContactForm";
-import sideImg from "../../public/contact-form.jpg";
+import sideImg from "/contact-form.jpg";
 
 const CTASection: React.FC = () => {
   return (

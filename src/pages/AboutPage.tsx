@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-  Chip,
-  Button,
-} from "@mui/material";
+import { Box, Container, Grid, Stack, Typography, Chip } from "@mui/material";
 
-import aboutHero from "../../public/about-hero.png";
-import sociosPhoto from "../../public/socios.jpg";
+import aboutHero from "/about-hero.png";
+import sociosPhoto from "/socios.jpg";
+import { ValuesGrid } from "../components/ValuesGrid";
 
 const AboutHero: React.FC = () => {
   return (
@@ -89,30 +82,27 @@ const AboutSection: React.FC = () => {
 
               <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
                 A Enigme nasceu com o propósito de encarar cada projeto como um
-                enigma a ser decifrado. Acreditamos que soluções robustas podem
-                (e devem) ser simples de usar. Por isso unimos criatividade,
-                design e engenharia para transformar desafios complexos em
-                experiências intuitivas e confiáveis.
+                enigma a ser decifrado. Desde o início, entendemos que a
+                tecnologia só tem valor quando melhora a vida das pessoas. Por
+                isso, nosso principal objetivo é aprimorar a experiência dos
+                usuários, tornando o complexo simples e o técnico, acessível.
               </Typography>
 
               <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-                Nossa identidade visual traduz essa visão: formas firmes,
-                perspectivas bem definidas e uma paleta de azuis que evocam
-                estrutura, confiança e inovação — um convite a observar o mesmo
-                desafio por ângulos diferentes até chegar à solução mais clara.
+                Mais do que desenvolver sistemas, fazemos parte de algo maior:
+                um ecossistema que conecta inovação, design e engenharia para
+                transformar desafios em oportunidades. Cada projeto é uma peça
+                de um todo que une negócios, tecnologia e propósito, sempre com
+                foco em entregar experiências digitais intuitivas e humanas.
               </Typography>
 
-              <Stack
-                direction="row"
-                spacing={1}
-                flexWrap="wrap"
-                sx={{ columnGap: 1, rowGap: { xs: 1, sm: 1 } }}
-              >
-                <Chip label="Inovação" sx={{ fontWeight: 700 }} />
-                <Chip label="Clareza" sx={{ fontWeight: 700 }} />
-                <Chip label="Simplicidade" sx={{ fontWeight: 700 }} />
-                <Chip label="Confiabilidade" sx={{ fontWeight: 700 }} />
-              </Stack>
+              <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
+                Temos a visão de nos tornarmos referência no desenvolvimento de
+                software, reconhecidos pela capacidade de unir criatividade,
+                confiabilidade e impacto real. Continuamos evoluindo com o mesmo
+                espírito que nos trouxe até aqui — o de transformar tecnologia
+                em experiências que inspiram e geram valor duradouro.
+              </Typography>
             </Stack>
           </Grid>
         </Grid>
@@ -126,6 +116,7 @@ const AboutPage: React.FC = () => {
     <Stack spacing={6}>
       <AboutHero />
       <AboutSection />
+      <ValuesGrid />
     </Stack>
   );
 };

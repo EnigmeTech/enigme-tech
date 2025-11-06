@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Container, Box, Button, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import Logo from "../../public/enigme-logo.png";
+import Logo from "/enigme-logo.png";
 
 const Glass = styled(AppBar)({
   background: "rgba(11,16,32,0.6)",
