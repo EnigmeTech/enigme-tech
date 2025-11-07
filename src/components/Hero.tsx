@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
 
         overflow: "hidden",
         borderRadius: 0,
-        minHeight: { xs: 300, md: 420 },
+        minHeight: { xs: 300, md: 620 },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       }}
     >
       <Stack spacing={1} sx={{ maxWidth: 960, mx: "auto" }}>
-        <Typography variant="h3" sx={{ fontWeight: 800, lineHeight: 1.1 }}>
+        <Typography variant="h1" sx={{ fontWeight: 800, lineHeight: 1.1 }}>
           Contato
         </Typography>
       </Stack>

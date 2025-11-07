@@ -4,6 +4,7 @@ import { Box, Container, Grid, Stack, Typography, Chip } from "@mui/material";
 import aboutHero from "/about-hero.png";
 import sociosPhoto from "/socios.jpg";
 import { ValuesGrid } from "../components/ValuesGrid";
+import { FoundersSection } from "../components/FoundersSection";
 
 const AboutHero: React.FC = () => {
   return (
@@ -13,6 +14,9 @@ const AboutHero: React.FC = () => {
         position: "relative",
         overflow: "hidden",
         minHeight: { xs: 280, md: 520 },
+        height: {
+          md: "75vh",
+        },
         display: "flex",
         alignItems: "center",
         textAlign: "center",
@@ -22,7 +26,6 @@ const AboutHero: React.FC = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         py: { xs: 6, md: 10 },
-        mb: 4,
 
         left: "50%",
         transform: "translateX(-50%)",
@@ -48,11 +51,14 @@ const AboutSection: React.FC = () => {
         left: "50%",
         transform: "translateX(-50%)",
         width: "100svw",
-        background: "#0B1020",
+        background: "#121830",
         py: { xs: 6, md: 8 },
       }}
     >
-      <Container maxWidth="lg" sx={{ px: { xs: 2, md: 3 } }}>
+      <Container
+        maxWidth="lg"
+        sx={{ px: { xs: 2, md: 3 }, pb: { sm: 0, xs: 0, md: 0 } }}
+      >
         <Grid container spacing={{ xs: 3, md: 6 }} alignItems="center">
           <Grid item xs={12} md={5}>
             <Box
@@ -80,7 +86,10 @@ const AboutSection: React.FC = () => {
                 Nossa História
               </Typography>
 
-              <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
+              <Typography
+                variant="body1"
+                sx={{ color: "#FFFFFF", textAlign: "justify" }}
+              >
                 A Enigme nasceu com o propósito de encarar cada projeto como um
                 enigma a ser decifrado. Desde o início, entendemos que a
                 tecnologia só tem valor quando melhora a vida das pessoas. Por
@@ -88,7 +97,10 @@ const AboutSection: React.FC = () => {
                 usuários, tornando o complexo simples e o técnico, acessível.
               </Typography>
 
-              <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
+              <Typography
+                variant="body1"
+                sx={{ color: "#FFFFFF", textAlign: "justify" }}
+              >
                 Mais do que desenvolver sistemas, fazemos parte de algo maior:
                 um ecossistema que conecta inovação, design e engenharia para
                 transformar desafios em oportunidades. Cada projeto é uma peça
@@ -96,7 +108,10 @@ const AboutSection: React.FC = () => {
                 foco em entregar experiências digitais intuitivas e humanas.
               </Typography>
 
-              <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
+              <Typography
+                variant="body1"
+                sx={{ color: "#FFFFFF", textAlign: "justify" }}
+              >
                 Temos a visão de nos tornarmos referência no desenvolvimento de
                 software, reconhecidos pela capacidade de unir criatividade,
                 confiabilidade e impacto real. Continuamos evoluindo com o mesmo
@@ -113,10 +128,11 @@ const AboutSection: React.FC = () => {
 
 const AboutPage: React.FC = () => {
   return (
-    <Stack spacing={6}>
+    <Stack spacing={0}>
       <AboutHero />
       <AboutSection />
       <ValuesGrid />
+      <FoundersSection />
     </Stack>
   );
 };

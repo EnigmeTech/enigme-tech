@@ -9,7 +9,7 @@ const SiteLayout: React.FC = () => {
       sx={{
         minHeight: "100dvh",
         background:
-          "radial-gradient(1200px 600px at 50% -80%, rgba(11,76,254,0.35), transparent), linear-gradient(180deg, #060a15 0%, #0a0f1e 70%, #0a0f1e 100%)",
+          "radial-gradient(1200px 600px at 50% -80%, rgba(11,76,254,0.3), transparent), linear-gradient(180deg, #0B1224 0%, #111A33 70%, #0E1730 100%)",
         display: "flex",
         flexDirection: "column",
       }}

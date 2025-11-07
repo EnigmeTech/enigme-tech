@@ -1,15 +1,13 @@
 import { createTheme } from "@mui/material/styles";
 
-// Paleta conforme manual da marca:
-// #0C01B7 (azul profundo), #0B4CFE (azul), #6EA3F3 (azul claro), #B9D5FD (azul muito claro)
 const theme = createTheme({
   palette: {
     mode: "dark",
     primary: { main: "#0B4CFE" },
     secondary: { main: "#6EA3F3" },
     background: {
-      default: "#C9D8FF",
-      paper: "#E4EBFF",
+      default: "#070B14",
+      paper: "#0B1020",
     },
     text: {
       primary: "#EAF2FF",

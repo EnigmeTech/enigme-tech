@@ -28,14 +28,11 @@ const values = [
 
 export const ValuesGrid = () => {
   return (
-    <Box sx={{ mt: 8 }}>
+    <Box sx={{ mt: 8, m: { sm: 2, xs: 2 } }}>
       <Typography variant="h5" sx={{ mb: 4, fontWeight: 600 }}>
         Guiados por nossos valores
       </Typography>
-      <Typography
-        variant="body1"
-        sx={{ mb: 4, color: "text.secondary", maxWidth: 700 }}
-      >
+      <Typography variant="body1" sx={{ mb: 4, color: "text.secondary" }}>
         Criamos soluções sob medida que refletem a essência de cada cliente e
         traduzem nossos valores em resultados reais.
       </Typography>

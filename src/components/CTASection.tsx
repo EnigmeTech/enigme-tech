@@ -8,6 +8,7 @@ const CTASection: React.FC = () => {
     <Paper
       elevation={0}
       sx={{
+        mt: 4,
         p: { xs: 3, md: 5 },
         border: "1px solid rgba(255,255,255,0.08)",
         background:

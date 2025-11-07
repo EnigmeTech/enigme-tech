@@ -7,12 +7,12 @@ const ContactPage: React.FC = () => {
   const whatsappUrl =
     "https://wa.me/5592992313988?text=Oi%2C%20pessoal%20da%20Enigme%20Tech!%20Tudo%20bem%3F%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20e%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20voc%C3%AAs.";
   return (
-    <Stack spacing={6}>
+    <Stack spacing={0}>
       <Stack direction={{ xs: "column", md: "row" }} spacing={4}>
         <Box
           sx={{
             width: "100vw",
-            height: "80%",
+            height: "90%",
             position: "relative",
           }}
         >
@@ -20,7 +20,6 @@ const ContactPage: React.FC = () => {
         </Box>
       </Stack>
       <CTASection />
-      {/* Cartão WhatsApp */}
       <Box
         sx={{
           flex: 1,
