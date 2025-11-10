@@ -38,6 +38,7 @@ const HeroHome: React.FC = () => {
               lineHeight: 1.1,
               color: "common.white",
               mb: 6,
+              mx: 3,
               fontSize: { xs: "1.8rem", sm: "2.2rem", md: "3rem" },
             }}
           >
