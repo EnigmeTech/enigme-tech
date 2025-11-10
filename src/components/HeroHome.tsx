@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Stack, Typography, Chip } from "@mui/material";
-import heroBg from "/hero-home.png";
+import heroBg from "/hero-home-enigme.jpg";
 import { useNavigate } from "react-router-dom";
 
 const HeroHome: React.FC = () => {
   const navigate = useNavigate();
+
   return (
     <Box
       component="section"
@@ -14,19 +15,18 @@ const HeroHome: React.FC = () => {
         transform: "translateX(-50%)",
         width: "100svw",
         overflow: "hidden",
-        minHeight: { xs: 300, md: 480 },
+        minHeight: { xs: 400, md: 640 },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
         backgroundImage: `
-          linear-gradient(180deg, rgba(12,1,183,0.65) 0%, rgba(11,76,254,0.55) 100%),
+          linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
           url(${heroBg})
         `,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        mb: 2,
       }}
     >
       <Box>
@@ -38,6 +38,7 @@ const HeroHome: React.FC = () => {
               lineHeight: 1.1,
               color: "common.white",
               mb: 6,
+              fontSize: { xs: "1.8rem", sm: "2.2rem", md: "3rem" },
             }}
           >
             Transformamos enigmas em soluções
@@ -45,7 +46,13 @@ const HeroHome: React.FC = () => {
 
           <Typography
             variant="h4"
-            sx={{ fontWeight: 800, lineHeight: 1.1, color: "#7CFFCB", mb: 6 }}
+            sx={{
+              fontWeight: 800,
+              lineHeight: 1.1,
+              color: "#9FDBFF",
+              mb: 6,
+              fontSize: { xs: "1.2rem", sm: "1.6rem", md: "2rem" },
+            }}
           >
             Conheça a Enigme
           </Typography>
@@ -61,20 +68,53 @@ const HeroHome: React.FC = () => {
             <Chip
               label="Saiba mais"
               clickable
-              color="primary"
               sx={{
                 color: "common.white",
                 fontWeight: 700,
-                px: 2.5,
-                py: 1,
-                fontSize: "1.2rem",
+                px: { xs: 2, sm: 2.5 },
+                py: { xs: 0.5, sm: 1 },
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem" },
                 borderRadius: "999px",
                 width: "fit-content",
-                height: "60px",
+                height: { xs: "40px", sm: "50px", md: "60px" },
+                border: "2px solid rgba(255,255,255,0.9)", // 🔹 borda branca
+                backgroundColor: "rgba(255,255,255,0.08)",
+                backdropFilter: "blur(4px)", // 🔹 leve efeito vidro
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "rgba(255,255,255,0.18)",
+                  transform: "scale(1.05)",
+                },
               }}
             />
           </Box>
         </Stack>
+      </Box>
+
+      {/* Divisor em V */}
+      <Box
+        component="svg"
+        viewBox="0 0 1440 150"
+        preserveAspectRatio="none"
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100vw",
+          height: "120px",
+          display: "block",
+        }}
+      >
+        <defs>
+          <linearGradient id="enigmeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="rgba(8,18,46,0.95)" />
+            <stop offset="100%" stopColor="rgba(15,35,75,0.95)" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#enigmeGradient)"
+          d="M0,0 L720,150 L1440,0 L1440,150 L0,150 Z"
+        />
       </Box>
     </Box>
   );

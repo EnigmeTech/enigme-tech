@@ -15,6 +15,8 @@ const AboutHero: React.FC = () => {
         overflow: "hidden",
         minHeight: { xs: 280, md: 520 },
         height: {
+          sm: "35vh",
+          xs: "35vh",
           md: "75vh",
         },
         display: "flex",

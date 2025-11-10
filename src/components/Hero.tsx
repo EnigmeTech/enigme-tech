@@ -1,4 +1,3 @@
-// src/components/Hero.tsx
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import heroBg from "/hero-contact.png";
@@ -8,14 +7,12 @@ const Hero: React.FC = () => {
     <Box
       component="section"
       sx={{
-        // --- full-bleed mesmo dentro de Container:
         position: "relative",
         left: "50%",
         right: "50%",
         ml: "-50vw",
         mr: "-50vw",
         width: "100vw",
-
         overflow: "hidden",
         borderRadius: 0,
         minHeight: { xs: 300, md: 620 },
@@ -23,8 +20,15 @@ const Hero: React.FC = () => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
+
+        // 🔹 Fundo com bordas escuras e centro iluminado
         backgroundImage: `
-          linear-gradient(180deg, rgba(12,1,183,0.65) 0%, rgba(11,76,254,0.55) 100%),
+          radial-gradient(
+            circle at center,
+            rgba(30, 70, 180, 0.9) 0%,      /* azul mais claro no centro */
+            rgba(15, 40, 110, 0.94) 40%,
+            rgba(8, 20, 60, 0.98) 80%       /* bordas mais escuras */
+          ),
           url(${heroBg})
         `,
         backgroundSize: "cover",
@@ -34,7 +38,16 @@ const Hero: React.FC = () => {
       }}
     >
       <Stack spacing={1} sx={{ maxWidth: 960, mx: "auto" }}>
-        <Typography variant="h1" sx={{ fontWeight: 800, lineHeight: 1.1 }}>
+        <Typography
+          variant="h1"
+          sx={{
+            fontWeight: 800,
+            lineHeight: 1.1,
+            color: "rgba(230, 240, 255, 0.9)", // azul claro suave
+            textShadow: "0 3px 12px rgba(0,0,0,0.45)",
+            fontSize: { xs: "2.2rem", sm: "2.8rem", md: "4rem", lg: "5rem" },
+          }}
+        >
           Contato
         </Typography>
       </Stack>

@@ -1,48 +1,24 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Paper, Stack } from "@mui/material";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import DevicesIcon from "@mui/icons-material/Devices";
-import ApiIcon from "@mui/icons-material/Api";
-import CloudIcon from "@mui/icons-material/Cloud";
-import BugReportIcon from "@mui/icons-material/BugReport";
-import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import WebIcon from "@mui/icons-material/Web";
 
-type Service = {
-  title: string;
-  desc: string;
-  Icon: React.ElementType;
-};
-
-const SERVICES: Service[] = [
+const SERVICES = [
   {
-    title: "Discovery & UX",
-    desc: "Entrevistas, jornada, protótipos e validação rápida.",
-    Icon: LightbulbIcon,
-  },
-  {
-    title: "Desenvolvimento Web/App",
-    desc: "Front-end React/TS, mobile quando necessário.",
+    title: "Criação de Aplicativos e Softwares Sob Medida",
+    desc: "Desenvolvemos soluções personalizadas para atender exatamente às necessidades do seu negócio, com foco em eficiência e usabilidade.",
     Icon: DevicesIcon,
   },
   {
-    title: "Integrações & APIs",
-    desc: "FastAPI/Flask, autenticação e gateways.",
-    Icon: ApiIcon,
+    title: "Automação de Processos",
+    desc: "Eliminamos tarefas repetitivas e otimizamos fluxos de trabalho com soluções inteligentes e seguras, integrando sistemas e dados.",
+    Icon: SettingsSuggestIcon,
   },
   {
-    title: "Cloud & DevOps",
-    desc: "Deploy, monitoração e performance.",
-    Icon: CloudIcon,
-  },
-  {
-    title: "Qualidade & Testes",
-    desc: "Automação, testes de regressão e QA contínuo.",
-    Icon: BugReportIcon,
-  },
-  {
-    title: "Suporte & Evolução",
-    desc: "Roadmap, melhorias e novas features.",
-    Icon: AutoFixHighIcon,
+    title: "Landing Pages Otimizadas",
+    desc: "Projetamos páginas modernas, rápidas e de alto desempenho para atrair, engajar e converter visitantes em clientes.",
+    Icon: WebIcon,
   },
 ];
 
@@ -56,65 +32,105 @@ const ServicesSection: React.FC = () => {
         transform: "translateX(-50%)",
         width: "100svw",
         py: { xs: 6, md: 8 },
+        background: `
+          linear-gradient(180deg, rgba(8,18,46,0.95) 0%, rgba(11,35,90,0.95) 100%)
+        `,
+        color: "white",
         overflow: "hidden",
       }}
     >
-      <Container maxWidth="lg" disableGutters>
-        <Stack spacing={2} sx={{ textAlign: "center", mb: 4 }}>
-          <Typography variant="h4" sx={{ fontWeight: 800, color: "#FFFFFF" }}>
-            Serviços
+      <Container
+        maxWidth="lg"
+        disableGutters
+        sx={{
+          px: { xs: 3, md: 6 },
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        <Stack spacing={2} sx={{ textAlign: "center", mb: 6 }}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: 800,
+              color: "#9FDBFF",
+              textShadow: "0 0 12px rgba(159,219,255,0.5)",
+            }}
+          >
+            Nossos Principais Serviços
           </Typography>
+
           <Typography
             variant="body1"
-            color="text.secondary"
-            sx={{ fontWeight: 800 }}
+            color="rgba(255,255,255,0.7)"
+            sx={{
+              fontWeight: 600,
+              color: "rgba(255,255,255,0.75)",
+              mx: "auto",
+              maxWidth: "100%",
+              mt: 2,
+              fontSize: { xs: "0.95rem", md: "1.05rem" },
+              lineHeight: 1.6,
+            }}
           >
-            Do entendimento do problema à entrega em produção — cuidamos de cada
-            etapa para que suas ideias virem resultados.
+            Focamos em soluções que realmente transformam negócios, de landing
+            pages a sistemas inteligentes que otimizam processos.
           </Typography>
         </Stack>
 
-        <Grid container spacing={2.5}>
+        <Grid container spacing={3} justifyContent="center">
           {SERVICES.map(({ title, desc, Icon }) => (
-            <Grid item key={title} xs={12} sm={6} md={4}>
+            <Grid item key={title} xs={12} md={4}>
               <Paper
-                variant="outlined"
+                elevation={0}
                 sx={{
-                  p: 3,
+                  p: 4,
                   borderRadius: 3,
                   height: "100%",
+                  textAlign: "left",
+                  background:
+                    "linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  backdropFilter: "blur(6px)",
                   transition:
-                    "transform .2s ease, box-shadow .2s ease, border-color .2s ease",
+                    "transform .2s ease, box-shadow .2s ease, border-color .3s ease",
                   "&:hover": {
-                    transform: "translateY(-4px)",
-                    boxShadow: 2,
-                    borderColor: "primary.main",
+                    transform: "translateY(-6px)",
+                    borderColor: "rgba(110,198,255,0.6)",
+                    boxShadow: "0 0 20px rgba(110,198,255,0.20)",
                   },
                 }}
               >
-                <Stack direction="row" spacing={2} alignItems="flex-start">
+                <Stack spacing={1.5}>
                   <Box
                     sx={{
-                      width: 44,
-                      height: 44,
+                      width: 56,
+                      height: 56,
                       borderRadius: 2,
                       display: "grid",
                       placeItems: "center",
-                      bgcolor: "#0B4CFE",
-                      color: "common.white",
-                      flexShrink: 0,
+                      background: "rgba(110,198,255,0.12)",
+                      border: "1px solid rgba(110,198,255,0.3)",
+                      color: "#9FDBFF",
                     }}
                   >
-                    <Icon />
+                    <Icon sx={{ fontSize: 30 }} />
                   </Box>
-                  <Stack spacing={0.5}>
-                    <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                      {title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {desc}
-                    </Typography>
-                  </Stack>
+
+                  <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                    {title}
+                  </Typography>
+
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      opacity: 0.85,
+                      lineHeight: 1.5,
+                      color: "rgba(255,255,255,0.85)",
+                    }}
+                  >
+                    {desc}
+                  </Typography>
                 </Stack>
               </Paper>
             </Grid>

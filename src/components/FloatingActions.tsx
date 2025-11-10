@@ -43,7 +43,7 @@ export function FloatingActions() {
       sx={{
         position: "fixed",
         right: 24,
-        bottom: 24,
+        bottom: 34,
         zIndex: 1300,
         display: "flex",
         flexDirection: "column",
